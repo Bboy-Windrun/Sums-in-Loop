@@ -1,0 +1,70 @@
+package sums.in.loop;
+
+// initializes scanner library
+import java.util.Scanner;
+/**
+ *
+ * @author Jam Jam Desktop
+ */
+public class SumsInLoop {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        
+        //this will store your first value for each set
+        int [] valueArray1;
+        
+        //this will store your second value for each set
+        int [] valueArray2;
+        
+        //this will store your summed values
+        int [] valueArray3;
+        
+        // this will store the amount of cells the arrays will hold
+        int number;
+        
+        Scanner arrayValue = new Scanner(System.in);
+        System.out.println("Enter amount of sets for summation:");
+        
+        number = arrayValue.nextInt();
+        //whatever you input becomes the size of the array
+        valueArray1 = new int[number];
+        valueArray2 = new int[number];
+        valueArray3 = new int[number];
+        
+        //this for loop will input your desired values into the arrays and
+        //sum the values together
+        for (int i=0; i<number; i++) {
+            System.out.println("what is your first value?:");
+            valueArray1[i] = arrayValue.nextInt(); 
+            System.out.println("What is your second value?:");
+            valueArray2[i] = arrayValue.nextInt();
+            
+            System.out.println("values accepted, be ready with next set of"
+                    + " values.");
+            
+            //this function will sum up your set values
+            valueArray3[i] = valueArray1[i] +valueArray2[i];
+            
+        }
+        
+        System.out.println(" data:");
+        System.out.println(number);
+        
+        //this for loop will print out the values in each set side-by-side
+        for (int i=0; i<number; i++){
+            System.out.println(valueArray1[i] + " " + valueArray2[i]);
+        }
+        
+        System.out.println("answer:");
+        
+        //this for loop will output the summations side-by-side
+        for (int i=0; i<number; i++) {
+            System.out.print(valueArray3[i] + " ");
+        }
+        
+    }
+    
+}
