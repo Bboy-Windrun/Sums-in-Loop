@@ -4,13 +4,10 @@ package sums.in.loop;
 import java.util.Scanner;
 /**
  *
- * @author Jam Jam Desktop
+ * @author Bboy windrun
  */
 public class SumsInLoop {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
         
         //this will store your first value for each set
